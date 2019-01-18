@@ -1,0 +1,8 @@
+D:\Study\AutoMapperDemo\ConsoleApp1\bin\Debug\netcoreapp2.1\AutoMapperDemo.deps.json
+D:\Study\AutoMapperDemo\ConsoleApp1\bin\Debug\netcoreapp2.1\AutoMapperDemo.runtimeconfig.json
+D:\Study\AutoMapperDemo\ConsoleApp1\bin\Debug\netcoreapp2.1\AutoMapperDemo.runtimeconfig.dev.json
+D:\Study\AutoMapperDemo\ConsoleApp1\bin\Debug\netcoreapp2.1\AutoMapperDemo.dll
+D:\Study\AutoMapperDemo\ConsoleApp1\obj\Debug\netcoreapp2.1\AutoMapperDemo.csprojAssemblyReference.cache
+D:\Study\AutoMapperDemo\ConsoleApp1\obj\Debug\netcoreapp2.1\AutoMapperDemo.csproj.CoreCompileInputs.cache
+D:\Study\AutoMapperDemo\ConsoleApp1\obj\Debug\netcoreapp2.1\AutoMapperDemo.AssemblyInfoInputs.cache
+D:\Study\AutoMapperDemo\ConsoleApp1\obj\Debug\netcoreapp2.1\AutoMapperDemo.AssemblyInfo.cs

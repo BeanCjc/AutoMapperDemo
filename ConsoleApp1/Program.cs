@@ -1,6 +1,4 @@
-﻿using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -85,21 +83,7 @@ namespace ConsoleApp1
             Console.ReadKey();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
             Parallel.For(0, 10, i =>
             {
                 A a = A.GetInstance();
@@ -116,44 +100,22 @@ namespace ConsoleApp1
             var inttime = Convert.ToInt64(DateTime.Now.ToString("yyyyMMdd"));
 
             #region 
-            //Console.WriteLine($"this");
-            //log4net.Repository.ILoggerRepository loggerRepository = log4net.LogManager.CreateRepository("NETCOREREPOSITORY");
-            //log4net.Config.BasicConfigurator.Configure(loggerRepository);//注册log4net
-            //log4net.ILog log = log4net.LogManager.GetLogger(loggerRepository.Name, "netcorelog4net");
-            //log.Info("asdga");
-            //Console.ReadKey();
-            //Child c = new Child();
-            //var b = c as Base;
-
-            //Base bb = new Base();
-            //var y = bb.GetResult(1);
-            //var x = b.GetResult(1);
-            //var ii = 5f;
-            //var result = c.GetResult(ii);
-            //Console.WriteLine(result);
-            //Console.WriteLine("Hello World!");
-            //int i = 0;
-            //var lst = new List<int>(){
-            //        i++,
-            //        i++,
-            //        i++,
-            //        i++,
-            //        i++,
-            //        i++,
-            //        i++,
-            //        i++,
-            //    };
-            //foreach (var item in lst)
-            //{
-            //    Console.WriteLine(i);
-            //}
+            Console.WriteLine($"this");
+            log4net.Repository.ILoggerRepository loggerRepository = log4net.LogManager.CreateRepository("NETCOREREPOSITORY");
+            log4net.Config.BasicConfigurator.Configure(loggerRepository);//注册log4net
+            log4net.ILog log = log4net.LogManager.GetLogger(loggerRepository.Name, "netcorelog4net");
+            log.Info("asdga");
+            Console.ReadKey();
             #endregion
         }
     }
 
+    /// <summary>
+    /// 单例的写法,支持多线程
+    /// </summary>
     class A
     {
-        private static volatile A x;
+        private static volatile A x;//这个关键字是需要的,不将变量放入缓存区,直接放入内存
         private static readonly object locker = new object();
         private A()
         {
@@ -175,24 +137,4 @@ namespace ConsoleApp1
             return x;
         }
     }
-
-    public class Base
-    {
-        public float GetResult(float input)
-        {
-            return input + 10f;
-        }
-        public virtual int GetResult(int input)
-        {
-            return input + 1;
-        }
-    }
-    public class Child : Base
-    {
-        public override int GetResult(int input)
-        {
-            return input + 2;
-        }
-    }
-
 }
